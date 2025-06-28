@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    :root{
+      --White: hsl(0, 100%, 100%);
+      --Grey-500: hsl(217, 12%, 63%);
+      --Grey-900: hsl(213, 19%, 18%);
+      --Grey-950: hsl(216, 12%, 8%);
+      --Orange-500:hsl(25, 97%, 53%);
+      --circle-background: #323d4a;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      color: white;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--Grey-950);
+      
+      display: flex;           
+      justify-content: center;  
+      align-items: center;      
+      height: 100vh;   
+    }
+    .container{
+      width: 400px;
+      height: 400px;
+      background-color: var(--Grey-900);
+      color: var(--White);
+      border-radius: 20px;
+      /* display: none; */
+    }
+    .items{
+      margin: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .hero-p{
+      font-size: 15px;
+      font-weight: 300;
+    }
+    .numbers{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .number{
+      width: 45px;
+      height: 43px;
+      border-radius: 50%;
+      background-color:var(--circle-background);
+      color: var(--White);
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .number:hover{
+      background-color: var(--Orange-500);
+    }
+    .number:active{
+      background-color: var(--White);
+      color: var(--circle-background);
+    }
+    .hero-button{
+       width: 100%;
+      padding: 10px 0;
+     background-color:var(--Orange-500);
+     border-radius: 20px;
+     border: none;
+     text-transform: uppercase;
+    }
+    .thank-you-container{
+      width: 370px;
+      height: 400px;
+      background-color: var(--Grey-900);
+      color: var(--White);
+      border-radius: 20px;
+      display: none;
+    }
+    img{
+      width: 50%;
+      height: 50%;
+      margin-bottom: 10px;
+    }
+    .thank-you-image{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .thank-you-p{
+      width: 300px;
+      height: 45px;
+      background-color:var(--circle-background) ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      color: var(--Orange-500);
+      margin-bottom: 15px;
+    }
+    .thank-you-p p{
+      margin: 0;
+    }
+    .thank-you{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Rating state start -->
+<div class="container">
+  <div class="items">
+  <div class="image number">
+     <img src="./images/icon-star.svg" alt="star">
+  </div>
+ 
+  <h2 class="hero-head">How did we do?</h2>
+<div class="hero-p">
+  <p>Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!</p> 
+  </div>
+
+  <div class="numbers">
+    <div class="number">1</div>
+    <div class="number">2</div>
+    <div class="number">3</div>
+    <div class="number">4</div>
+    <div class="number">5</div>
+ 
+  </div>
+
+  <button class="hero-button">Submit</button>
+  </div>
+  </div>
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <div class="thank-you-container">
+    <div class="items">
+      <div class="thank-you-image">
+      <img src="./images/illustration-thank-you.svg" alt="">
+      </div>
+      <div class="thank-you-p">
+   <p>You selected <span class="selected-rating"></span> here out of 5 </p> 
+   </div>
+  
+   <div class="thank-you">
+   <h2>Thank you! </h2>
+   <p class="hero-p">We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!</p>
+  </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+
+  <!-- Thank you state end -->
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="./sript.js"></script>
+</body>
+</html>
