@@ -1,0 +1,61 @@
+ :root{
+      --Blue-200: hsl(193, 38%, 86%);
+      --Green-300: hsl(150, 100%, 66%);
+      --Blue-600: hsl(217, 19%, 38%);
+      --Blue-900: hsl(217, 19%, 24%);
+      --Blue-950: hsl(218, 23%, 16%);
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: var(--Blue-950);
+        font-family: 'Inter';
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .container{
+        position: relative;
+        width: 90%;
+        max-width: 450px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--Blue-900);
+        gap: 20px;
+        padding: 40px 20px 40px 20px;
+        border-radius: 10px;
+    }
+    h1{
+        font-size: 1.7rem;
+        color: var(--Blue-200);
+        text-align: center;
+    }
+    p{
+        font-size: 0.88rem;
+        font-weight: 800;
+        color: var(--Green-300);
+        text-align: center;
+        text-transform: uppercase;
+    }
+    button{
+        border-radius: 50px;
+        padding: 15px;
+        width: 60px;
+        height: 60px;
+        background-color: var(--Green-300);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+         position: absolute;
+         bottom: -30px; 
+         left: 44%;
+    
+    }
